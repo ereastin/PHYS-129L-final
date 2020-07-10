@@ -1,0 +1,54 @@
+##attributes for hek call
+dir(sunpy.net.hek.attrs)
+['AR', 'Area', 'Bound', 'BoundBox', 'CC', 'CD', 'CE', 'CH', 'CJ', 'CR', 'CW', 'Contains', 'EF', 'ER', 'Event', 'EventType', 'FA', 'FE', 'FI', 'FL', 'FRM', 'Freq', 'Intens', 'LP', 'Misc', 'NR', 'OBS', 'OS', 'OT', 'Outflow', 'PG', 'SG', 'SP', 'SS', 'Skel', 'SpatialRegion', 'TO', 'Time', 'Veloc', 'Wave', '_BoolParamAttr', '_ComparisonParamAttrWrapper', '_ListAttr', '_NumberParamAttrWrapper', '_ParamAttr', '_StringParamAttrWrapper', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', '_a', '_c', 'absolute_import', 'apply', 'attr', 'datetime', 'parse_time', 'six', 'walker']
+
+
+##getting data from hek
+result = client.query(hek.attrs.Time('2019/05/16', '2019/05/25'), hek.attrs.EventType('CE'))
+>>> len(result)
+5
+>>> result[0].keys()
+
+
+################datasources and source id for helioviewer
+SDO HMI Mag: 19
+SDO HMI Int: 18
+SDO AIA 4500: 17
+SDO AIA 94: 8
+SDO AIA 131: 9
+SDO AIA 335: 14
+SDO AIA 171: 10
+SDO AIA 304: 13
+SDO AIA 1600: 15
+SDO AIA 211: 12
+SDO AIA 1700: 16
+SDO AIA 193: 11
+STEREO_B COR2-B: 31
+STEREO_B EUVI-B 304: 27
+STEREO_B EUVI-B 284: 26
+STEREO_B EUVI-B 195: 25
+STEREO_B EUVI-B 171: 24
+STEREO_B COR1-B: 30
+Yohkoh SXT white-light: 35
+Yohkoh SXT thin-Al: 34
+Yohkoh SXT AlMgMn: 33
+SOHO MDI Mag: 6
+SOHO MDI Int: 7
+SOHO LASCO C3: 5
+SOHO LASCO C2: 4
+SOHO EIT 304: 3
+SOHO EIT 284: 2
+SOHO EIT 195: 1
+SOHO EIT 171: 0
+PROBA2 SWAP 174: 32
+STEREO_A COR2-A: 29
+STEREO_A EUVI-A 304: 23
+STEREO_A EUVI-A 284: 22
+STEREO_A EUVI-A 195: 21
+STEREO_A EUVI-A 171: 20
+STEREO_A COR1-A: 28
+
+
+##colormap keys
+sunpy.cm.cmlist.keys()
+dict_keys(['sohoeit304', 'soholasco3', 'irissji5000', 'yohkohsxtal', 'sohoeit171', 'hinodexrt', 'irissjiSJI_NUV', 'sdoaia94', 'irissji1400', 'rhessi', 'irissjiFUV', 'sdoaia1700', 'stereocor2', 'irissji1600', 'irissjiNUV', 'sdoaia131', 'traceWL', 'trace1600', 'sdoaia335', 'trace1700', 'trace171', 'irissji2832', 'sdoaia171', 'sohoeit284', 'soholasco2', 'irissji1330', 'trace284', 'hmimag', 'stereohi2', 'hinodesotintensity', 'trace1216', 'stereocor1', 'sdoaia304', 'sdoaia193', 'sdoaia211', 'sdoaia4500', 'trace1550', 'trace195', 'stereohi1', 'yohkohsxtwh', 'irissji2796', 'sdoaia1600', 'sohoeit195'])
